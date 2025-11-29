@@ -46,18 +46,36 @@ We do not rely on black-box LLMs at runtime. Instead, we use a **Deterministic H
 ## Installation & Running
 
 ### Prerequisites
+Daedalus supports both Physics (MuJoCo) and Visual (Atari) domains.
+
 ```bash
-pip install torch numpy gymnasium[mujoco]
+# Core Dependencies
+pip install torch numpy
+
+# For Physics (MuJoCo)
+pip install "gymnasium[mujoco]"
+
+# For Visual (Atari)
+pip install "gymnasium[atari]" "gymnasium[accept-rom-license]" ale-py opencv-python
 ```
 
 ### Execution
-Run the evolutionary loop with the Daedalus protocol:
+
+#### 1. Physics Domain (MuJoCo - HalfCheetah)
+Run the evolutionary loop for continuous control:
 
 ```bash
 python evolve_manifold_mujoco.py
 ```
 
-The system will proceed through two phases:
+#### 2. Visual Domain (Atari - Breakout)
+Run the benchmark for discrete control with visual input:
+
+```bash
+python evolve_manifold_atari.py
+```
+
+The system will proceed through two phases in both domains:
 1.  **Gen 1 (Warm-up):** "Locking Plasticity, Truth Seeking"
 2.  **Gen 2+ (Awakening):** "Unlocking Plasticity, Energy Optimization"
 
@@ -66,12 +84,11 @@ The system will proceed through two phases:
 ## Performance Philosophy
 
 **Do not judge this model by its ability to run on a flat track.**
-Standard benchmarks reward "Overfitting". Daedalus is built for **Adaptability**.
+Standard benchmarks reward "Overfitting". Daedalus is built for **Adaptability** and **Universality**.
 
 To truly test Daedalus, you must torture it:
-- Change gravity.
-- Break a leg (Joint Lock).
-- Alter friction.
+- **Physics:** Change gravity, Break a leg (Joint Lock), Alter friction.
+- **Vision:** Invert colors, Add noise, Shift perspective.
 
 Watch as the **Hebbian Trace** rewires the brain in real-time to find a new equilibrium.
 
@@ -79,4 +96,4 @@ Watch as the **Hebbian Trace** rewires the brain in real-time to find a new equi
 
 **Architect:** User (The Director)
 **Engineer:** Google Jules (Project Daedalus Lead)
-**Version:** V3.0 (Tri-Lock Implemented)
+**Version:** V3.1 (Multi-Domain Support: MuJoCo & Atari)
