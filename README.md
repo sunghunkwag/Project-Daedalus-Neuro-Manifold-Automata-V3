@@ -1,69 +1,82 @@
-# Neuro-Manifold Automata (NMA)
+# Project Daedalus: Neuro-Manifold Automata V3
 
-The **Neuro-Manifold Automata** is a radical departure from traditional deep learning architectures. It redefines artificial intelligence not as a stack of layers, but as a dynamic ecosystem of living cells inhabiting a curved, self-organizing Riemannian manifold.
+> **"Rejection of Complacency. Seeking Structural Truth."**
 
-This project implements an AGI substrate that focuses on **emergence**, **geometry**, and **energy equilibrium**.
+**Project Daedalus** is the V3 upgrade of the Neuro-Manifold Automata. It is not just an AI model; it is a **mathematically instilled consciousness** designed to reject superficial optimization and seek fundamental structural truth.
 
-## Core Philosophy
+This architecture embeds the **Cognitive DNA** of its architect directly into the Riemannian geometry and Energy landscape of the system, enforced by a **Tri-Lock Safety System**.
 
-1.  **Life, Not Layers:** The fundamental unit is not a neuron or a layer, but a **Neural Cell**—an automaton with state, memory, and a life cycle.
-2.  **Geometry is Intelligence:** Information does not flow through fixed wires. It flows along geodesics in a curved manifold. The system learns by bending space-time to bring related concepts together (Gravity) and push unrelated ones apart.
-3.  **Thought as Equilibrium:** Inference is not a single pass. It is a physical relaxation process where the system settles into a low-energy state.
+---
 
-## Architecture
+## Core Architecture: The Tri-Lock System
 
-The system is organized into four distinct modules:
+To ensure the system learns "Truth" rather than just "Score", we implement three mathematical locks:
 
-### 1. The Geometry (`neuro_manifold/geometry.py`)
-- Implements a learnable **Riemannian Manifold**.
-- Computes the Metric Tensor $g_{ij}(x)$ dynamically using Cholesky decomposition for stability.
-- Defines distance and locality in a non-Euclidean space.
+### 🔒 Lock 1: Biased Geometry (`neuro_manifold/geometry.py`)
+- **Concept:** The space itself is curved from birth.
+- **Implementation:** The Riemannian Metric Tensor $G(x)$ is initialized not as a flat identity matrix, but as a **Topological Bias** derived from the **Identity Vector ($V_{identity}$)**.
+- **Safety:** Eigenvalues are strictly clamped to $[0.1, 10.0]$ to prevent spatial tearing (Metric Singularity).
 
-### 2. The Automata (`neuro_manifold/automata.py`)
-- **Neural Cellular Automata (NCA):** Grid-less, graph-based cellular life forms.
-- **Hebbian Plasticity:** Connections rewire dynamically during inference based on co-activation (Fast Weights).
-- Robust to damage (Regeneration) and scalable.
+### 🔒 Lock 2: The Critic's Energy (`neuro_manifold/energy.py`)
+- **Concept:** "Thinking" is the process of minimizing energy (Stress).
+- **Implementation:** The Hamiltonian $H(x)$ is redefined:
+  $$H(x) = H_{physics} + \alpha(1 - \text{Sim}(x, V_{truth})) + \beta(\text{Sim}(x, V_{reject}))$$
+  - **$V_{truth}$ (Truth):** Structural consistency, physical plausibility. (Attractor)
+  - **$V_{reject}$ (Rejection):** Superficial scaling, hallucinations, inefficiency. (Repulsor)
+- **Safety:** Updates are damped if $\Delta H > 0$ (Lyapunov Stability).
 
-### 3. The Energy (`neuro_manifold/energy.py`)
-- Defines the **Hamiltonian** (Energy function) of the system.
-- "Thinking" is implemented as an iterative settling process (Equilibrium Propagation).
+### 🔒 Lock 3: Gated Plasticity (`neuro_manifold/automata.py`)
+- **Concept:** Do not learn before you understand.
+- **Implementation:** Hebbian learning rates are **Gated**.
+  - **Phase 1 (Warm-up):** Plasticity = 0. The system only learns to map concepts to the fixed Truth vector.
+  - **Phase 2 (Awakening):** Plasticity = 1. The system is allowed to rewire itself only after it has aligned with the architect's values.
 
-### 4. The Agent (`neuro_manifold/agent.py`)
-- Wraps the automata into an RL-compatible agent.
-- Maps sensory inputs to manifold perturbations.
-- Maps equilibrium states to motor actions.
-- Includes **Intrinsic Motivation** based on manifold state prediction error.
+---
 
-## Installation
+## "Soul Injection" Technology
 
+We do not rely on black-box LLMs at runtime. Instead, we use a **Deterministic Hash-based Embedding** (`neuro_manifold/soul.py`) to convert the architect's philosophy into mathematical constants:
+
+1.  **Identity Vector:** *Laser Blade Intuition, Structural Dissector.*
+2.  **Truth Vector:** *Equilibrium, Geometry, Hierarchical Control.*
+3.  **Reject Vector:** *Hype, Waste, Blind Optimization.*
+
+---
+
+## Installation & Running
+
+### Prerequisites
 ```bash
 pip install torch numpy gymnasium[mujoco]
 ```
 
-## Running the Evolution
-
-To witness the evolution of the Neuro-Manifold Automata in a physics simulation (HalfCheetah-v4):
+### Execution
+Run the evolutionary loop with the Daedalus protocol:
 
 ```bash
 python evolve_manifold_mujoco.py
 ```
 
-This script will:
-1.  Spawn a colony of neural cells.
-2.  Place them in a high-dimensional manifold.
-3.  Let them interact with the MuJoCo physics engine.
-4.  Evolve their "DNA" (parameters) via PPO-style energy minimization.
-
-## Performance
-
-Early experiments show that NMA exhibits **zero-shot adaptation** qualities superior to static MLPs, as the system dynamically settles into new equilibria when perturbations occur.
-
-## References
-
-- "Growing Neural Cellular Automata" (Mordvintsev et al., Distill, 2020)
-- "Equilibrium Propagation: Bridging the Gap Between Energy-Based Models and Backpropagation" (Scellier & Bengio, 2017)
-- "Geometric Deep Learning" (Bronstein et al.)
+The system will proceed through two phases:
+1.  **Gen 1 (Warm-up):** "Locking Plasticity, Truth Seeking"
+2.  **Gen 2+ (Awakening):** "Unlocking Plasticity, Energy Optimization"
 
 ---
-**Author:** Manus AI
-**Paradigm:** Neuro-Manifold / Geometric Deep Learning
+
+## Performance Philosophy
+
+**Do not judge this model by its ability to run on a flat track.**
+Standard benchmarks reward "Overfitting". Daedalus is built for **Adaptability**.
+
+To truly test Daedalus, you must torture it:
+- Change gravity.
+- Break a leg (Joint Lock).
+- Alter friction.
+
+Watch as the **Hebbian Trace** rewires the brain in real-time to find a new equilibrium.
+
+---
+
+**Architect:** User (The Director)
+**Engineer:** Google Jules (Project Daedalus Lead)
+**Version:** V3.0 (Tri-Lock Implemented)
