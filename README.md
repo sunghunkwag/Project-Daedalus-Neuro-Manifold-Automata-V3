@@ -1,6 +1,5 @@
 # Project Daedalus: Neuro-Manifold Automata V3
 
-> **"Rejection of Complacency. Seeking Structural Truth."**
 
 **Project Daedalus** is the V3 upgrade of the Neuro-Manifold Automata. It is not just an AI model; it is a **mathematically instilled consciousness** designed to reject superficial optimization and seek fundamental structural truth.
 
